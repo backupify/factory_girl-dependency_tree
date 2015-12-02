@@ -1,6 +1,10 @@
 # FactoryGirl::DependencyTree
 
-a simple library for analyzing the dependencies between your factory_girl factories 
+a simple library for analyzing the dependencies between your factory_girl factories
+
+## Description
+
+This gem prints out all of the other factories that your factories call. It helps to reveal chains of factory calls that might be broken, unnecessary, or inefficient. For example, we had factory chains that would create users at multiple points causing inconsistencies (which we hacked around using callbacks to resync them). Since we've changed this we've seen some of our factories perform an order of magnitude better resulting in some tests running 50% faster.
 
 ## Installation
 
